@@ -1,0 +1,31 @@
+.customDiv{
+    text-align: center;
+    background-color: silver;
+    border-color: aqua;
+    border-width: 20px;
+    min-height: 300px;
+  }
+  .pragraph{
+      background-color: blue;
+  }
+  .borderAvail{
+      border: 6px;
+      border-color: brown;
+  }
+
+  .pragraph-title{
+    background-color: blue;
+    background-color: silver;
+    padding: 30px;
+}
+.pragraph-body{
+  background-color: blue;
+  background-color: skyblue;
+  padding: 30px;
+}
+.pragraph-title-image{
+  margin: 2px;
+  background-color: blue;
+  padding: 30px;
+  border: 1ex;
+}

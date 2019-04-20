@@ -1,0 +1,21 @@
+.div-class{
+    align-self: auto;
+}
+.vertical-align{
+    display:flex;
+    align-items: center;
+}
+.display-div{
+    display:block;
+    width: 26%;
+    margin-top: 9%;
+}
+.div-align{
+    display:block;
+    align-items: center !important;
+}
+.ag-header-container1{
+  height: 100%;
+  white-space: nowrap;
+  background-color: green !important;
+}

@@ -1,0 +1,99 @@
+<p>
+  dashboard works!
+</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <ul>
+        <li>
+          <span>ID::</span>
+          <span>{{id}}</span>
+          <br>
+        </li>
+        <li>
+          <span>userID::</span>
+          <span>{{userId}}</span>
+          <br>
+        </li>
+        <li>
+          <span>data:: </span>
+          <span>{{title}}</span>
+          <br>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <label>County</label>
+          <span>
+            <select select2 style="width:20%;" class="select2" id="symbolId" [(ngModel)]="selectBox">
+              <option *ngFor="let symbol of symbols" value="{{symbol}}">{{symbol}}</option>
+            </select>
+          </span>
+
+        </li>
+        <li>
+          <label>State</label>
+          <span>
+            <select2 [data]="myCountryData" (valueChanged)="callChange($event)" [options]="options" [cssImport]="true"></select2>
+
+          </span>
+
+        </li>
+        <li>
+            <label>Active Bhisi</label>
+            <span>
+              <select2 [data]="myActiveBhisi" (valueChanged)="selectActiveBhisi($event)" [options]="options" [cssImport]="true"></select2>
+
+            </span>
+
+        </li>
+        <li>
+          <label>TextPRertyCheck</label>
+          <span>
+            <input type="text" attr.value="{{Hitme}}" [placeholder]="input_Name" width="10%" />
+
+          </span>
+
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <input type="button" (click)="sendback()" value="Back" /> </li>
+
+      </ul>
+    </div>
+    <div class="col-xs-4">
+        <div class="container" >
+
+				<div class="row vertical-align">
+					<div class="col-xs-2 div-align">
+						<img src="../../assets/image/ifel.gif" class="display-div" />
+					</div>
+					<div class="col-xs-10">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">{{countryName}}</h3>
+							</div>
+							<div class="panel-body">
+								<li *ngFor="let state of state_list">
+									<ul>
+										<label>{{state}} </label>
+                  </ul>
+                  <ul>
+										<button (click)="goToDetailPage($event)"> {{state}}-Input</button>
+									</ul>
+
+								</li>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+    </div>
+
+  </div>
+  <!--row end -->
+</div>
