@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Configuration status="debug">
+	<Properties>
+		<Property name="log-path">/home/LogFiles</Property> 
+	<!-- 	 <Property name="log-path">C:/log</Property> -->
+	</Properties>
+
+	<Appenders>
+		<RollingFile name="file-log"
+			fileName="${log-path}/web-app-logs/exception/exception-services.log"
+			filePattern="${log-path}/web-app-logs/exception/exception-services_%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%-5level] %c{1} - %msg%n
+				</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+		</RollingFile>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<!-- Application Loggers -->
+		<Logger name="com.commscope.exception" level="debug" additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Logger>
+
+		<!-- 3rdparty Loggers -->
+		<!-- <Logger name="org.springframework.core" level="info"
+			additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Logger>
+		<Logger name="org.springframework.security" level="info"
+			additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Logger>
+		<Logger name="org.springframework.beans" level="info"
+			additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Logger> -->
+		<Logger name="org.springframework.context" level="info"
+			additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Logger>
+		<!-- <Logger name="org.springframework.web" level="info" additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Logger> -->
+		<!-- <Logger name="org.hibernate.type" level="debug" additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Logger>
+		<Logger name="log4j.logger.org.springframework.jdbc.core"
+			level="debug" additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Logger>
+		<Logger name="org.hibernate.type" level="debug" additivity="false">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Logger> -->
+		<!-- Root Logger -->
+		<!-- <Root level="DEBUG">
+			<appender-ref ref="console" />
+			<appender-ref ref="file-log" />
+		</Root> -->
+		
+		
+	</Loggers>
+</Configuration>

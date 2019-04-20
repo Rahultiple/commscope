@@ -1,0 +1,10 @@
+https://commscopedevapi.azurewebsites.net/exception/swagger-ui.html
+https://commscopedevapi.azurewebsites.net/exception/API_ERROR
+{
+	"Error_Msg":"eeeee",
+	"Error_Type":"wwww",
+	 "Message_Body":"wwww",
+	 "Sender_Id":"4324r",
+	 "Trans_Type":"PO_DETAILS",
+	 "Error_Code":"4020"
+}
