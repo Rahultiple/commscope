@@ -1,0 +1,78 @@
+<div   id="myModal" class="container-fluid bg-light">
+    <div class="modal-dialog" *ngIf="showModal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h1>Loading-------</h1>
+             </div>
+        </div>
+      </div>
+<form id="search-form" [formGroup]="addForm" (ngSubmit)="onSaveRow()"  *ngIf="!showModal">
+    <div class="messages">
+
+    </div>
+    <div class="controls" >
+      <div class="row">
+        <div class="col-sm-4">
+         <div class="form-group" >
+            <label for="form_errorCode" class="control-label">Error Code </label>
+            <input id="form_errorCode" type="text" formControlName="Internal_Error_Code" name="errorCode" class="form-control" [ngClass]="{'has-error': addForm.get('Internal_Error_Code').errors && (addForm.get('Internal_Error_Code').touched || addForm.get('Internal_Error_Code').dirty)  }"
+              placeholder="Please enter Error Code" required="required" data-error="ErrorCode is required." [attr.disabled]="disabled">
+            <div class="help-block with-errors has-error">
+               <span *ngIf="addForm.get('Internal_Error_Code').errors && (addForm.get('Internal_Error_Code').touched || addForm.get('Internal_Error_Code').dirty) ">Error Code with numbers are mandatory</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+              <label for="form_errorType">Error Type </label>
+              <input id="form_errorType" type="text" formControlName="Error_Type" name="errorType" class="form-control" [ngClass]="{'has-error': addForm.get('Error_Type').errors && (addForm.get('Error_Type').touched || addForm.get('Error_Type').dirty)  }"
+                placeholder="Please enter Error Type" required="required" data-error="errorType is required.">
+              <div class="help-block with-errors has-error">
+                  <span *ngIf="addForm.get('Error_Type').errors && (addForm.get('Error_Type').touched || addForm.get('Error_Type').dirty) ">Error Type is required</span>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="form_responseType">Level </label>
+            <select id="form_level" class="form-control input-lg" formControlName="Level">
+              <option *ngFor="let level of levelTypes" [value]="level">{{level}} </option>
+            </select>
+            <div class="help-block with-errors  has-error">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+            <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="form_errorMessage">Error Message</label>
+                    <textarea id="form_errorMessage" rows="2" cols="50" name="errorMessage" class="form-control" formControlName="Exception_Message"
+                      placeholder="Please enter Error Message" required="required" data-error="Error Message Number is required." [ngClass]="{'has-error': addForm.get('Exception_Message').errors && (addForm.get('Exception_Message').touched || addForm.get('Exception_Message').dirty)  }"></textarea>
+                    <div class="help-block with-errors  has-error">
+                        <span *ngIf="addForm.get('Exception_Message').errors && (addForm.get('Exception_Message').touched || addForm.get('Exception_Message').dirty) ">Exception Message is required</span>
+                    </div>
+                  </div>
+            </div>
+
+       </div>
+
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+      <div class="col-md-2" >
+        <span>
+               <input type="submit" class="btn btn-warning btn-send" value="Save" [attr.disabled]="disabledButton">
+        </span>
+      </div>
+      <div class="col-md-10" *ngIf="flagShowError">
+        <span style="color: red">
+            {{showErrorData}}
+        </span>
+      </div>
+    </div>
+
+  </form>
+</div>
+

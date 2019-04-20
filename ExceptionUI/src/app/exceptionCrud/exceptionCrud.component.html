@@ -1,0 +1,117 @@
+
+<script>
+
+</script>
+<section>
+  <div class="container-fluid bg-light py-3">
+      <div class="row">
+        <div class="col-md-12 mx-auto">
+          <p style="font-size: x-large;font-weight: 700;text-align:center">
+             Exception Message
+          </p>
+        </div>
+      </div>
+
+    <br>
+    <hr>
+    <div *ngIf="showGrid">
+
+    <div class="row">
+      <div class="col-md-12" *ngIf="!loadingFlag">
+        <div class="mx-auto">
+        <ag-grid-angular  class="ag-theme-balham" [rowData]="rowData" [style.height]="myHeaderHeight"
+        [columnDefs]="columnDefs"  [rowSelection]="rowSelection" (selectionChanged)="onSelectionChanged($event)" (gridReady)="onGridReady($event)">
+        </ag-grid-angular>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><hr></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+
+          <h1 *ngIf="loadingFlag">
+              Loading.....
+           </h1>
+        </div>
+
+    </div>
+    <div class="row" *ngIf="!loadingFlag">
+        <div class="col-md-6">
+            <span *ngIf="flagNoData">
+              <input type="button" (click)="exportAsXLSX()" class="btn btn-warning btn-send  mr-2" value="Export Excel" />
+            </span>
+            <span>
+                <button type="button" class="btn btn-warning btn-send  mr-2" (click)="openAddRowModel(modelContent)">
+                    Add Row
+                </button>
+
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-6">
+
+          <table border=1>
+          <thead style="background-color: yellowgreen;text-align: center">
+            <th >
+              Request
+            </th>
+           <!--  <th>
+              Sent Request
+            </th> -->
+            <th>
+                Selected Row Response
+            </th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Request
+              </td>
+             <!--  <td>
+                <pre>{{searchForm.value | json}}</pre>
+              </td> -->
+              <td class="overflow-wrap-hack">
+                  <pre><div id="selectedRows" class="content"></div></pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!--modal Code starts-->
+
+        <div id="modal-dialog">
+
+                 <ng-template #modelContent let-modal>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title mx-auto" style="font-size: x-large;font-weight: 700;text-align:center">
+                        {{modalHeader}}
+                      </h4>
+                      <button type="button" class="close" (click)="modal.close('Save click')">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <div class="container-fluid bg-light">
+                        <app-add-excel-row [inputGridData]=inputGridData></app-add-excel-row>
+                      </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
+                    </div>
+                  </ng-template>
+
+        </div>
+         <!-- <pre>{{searchForm.value | json}}</pre>-->
+        </div>
+        </div>
+    </div>
+
+  </div>
+</section>

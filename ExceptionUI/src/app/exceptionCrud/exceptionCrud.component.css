@@ -1,0 +1,25 @@
+.ag-header-container1 {
+  height: 100%;
+  white-space: nowrap;
+  background-color: yellowgreen;
+}
+.content{
+  word-wrap:break-word; /*old browsers*/
+  overflow-wrap:break-word;
+  display: block;
+}
+
+table{
+  width:100%; /*must be set (to any value)*/
+}
+
+.overflow-wrap-hack{
+  max-width:1px;
+}
+.b {
+  word-wrap: break-word;
+  width: 150px;
+  border: 1px solid #000000;
+}
+
+
