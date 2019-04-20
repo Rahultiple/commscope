@@ -1,0 +1,147 @@
+
+<script>
+
+</script>
+<section>
+  <div class="container-fluid bg-light py-3">
+    <div style="text-align: center;font-size: x-large;font-weight: 700;">
+        <p >
+            Search Audit
+        </p>
+        <hr>
+    </div>
+
+    <form id="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <div class="messages"></div>
+      <div class="controls">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="form_senderId">Sender ID </label>
+              <input id="form_senderId" type="text" formControlName="senderID" name="senderId" class="form-control"
+                placeholder="Please enter sender Id" required="required" data-error="senderId is required.">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="form_responseType">Response Type </label>
+                <select id="form_responseType" class="form-control input-lg" formControlName="responseType" >
+                   <option *ngFor="let lang of responseTypes"  [value]="lang">{{lang}}   </option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="form_transactionType">Transaction Type</label>
+              <input id="form_transactionType" type="text" formControlName="transactionType" name="transactionType" class="form-control"
+                placeholder="Please enter valid Transaction Type">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="form_sourceName">Id Number</label>
+                  <input id="form_sourceName" type="text" name="sourceName" class="form-control" formControlName="idNumber"
+                    placeholder="Please enter Id Number" required="required" data-error="Id Number is required.">
+                  <div class="help-block with-errors"></div>
+                </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="form-group">
+                <label for="form_sourceName">Source Name</label>
+                <input id="form_sourceName" type="text" name="sourceName" class="form-control" formControlName="sourceName"
+                  placeholder="Please enter Source Name" required="required" data-error="sourceName is required.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                  <label for="form_date">Search Date</label>
+                  <input id="form_to_date" type="text" bsDaterangepicker  [bsConfig]="datePickerConfig"   name="searchDate" class="form-control" formControlName="searchDate" placeholder="Date Range (YYYY-MM-DD)"
+                   required="required" data-error="sourceName is required.">
+                  <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <input type="submit" class="btn btn-warning btn-send" value="Search">
+        </div>
+      </div>
+
+    </form>
+    <br>
+    <div *ngIf="showGrid">
+
+    <div class="row">
+      <div class="col-md-12" *ngIf="!loadingFlag">
+
+        <ag-grid-angular  class="ag-theme-balham" [rowData]="rowData" [style.height]="myHeaderHeight" [columnDefs]="columnDefs" >
+        </ag-grid-angular>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><hr></div>
+
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+
+          <h1 *ngIf="loadingFlag">
+              Loading.....
+           </h1>
+        </div>
+
+    </div>
+    <div class="row" *ngIf="!loadingFlag">
+        <div *ngIf="flagNoData" class="col-md-4">
+          <input type="button" (click)="exportAsXLSX()" class="btn btn-warning btn-send" value="Export Excel">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-6">
+
+          <table border=1>
+          <thead style="background-color: yellowgreen;text-align: center">
+            <th >
+              Request
+            </th>
+            <th>
+              Sent Request
+            </th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Request
+              </td>
+              <td>
+                <pre>{{searchForm.value | json}}</pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+         <!-- <pre>{{searchForm.value | json}}</pre>-->
+        </div>
+        </div>
+    </div>
+
+  </div>
+</section>
