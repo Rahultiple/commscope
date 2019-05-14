@@ -1,0 +1,70 @@
+{
+	"Header": {
+		"APartyDetails": {
+			"Sender": "a",
+			"Receiver": "a"
+		},
+		"CType": {
+			"Doctype": "a",
+			"Vertype": 0.1,
+			"SEmail": "a@a.com"
+		},
+		"DocDates": {
+			"currentDate": "a",
+			"requestedShipDate": "a",
+			"requestedDeliveryDate": "a",
+			"shipDate": "a",
+			"deliveryDate": "a"
+		},
+		"HDetail": {
+			"PONumber": 0.1,
+			"shipmentNumber": 0.1,
+			"deliveryNumber": 0.1,
+			"InvoiceNumber": 0.1,
+			"salesOrderNumber": 0.1,
+			"currency": "a",
+			"emailAddress": "a@a.com"
+		},
+		"HAddress": {
+			"shipTo": {
+				"shipToName": "a",
+				"shipToAddress": "a",
+				"shipToCity": "a",
+				"shipToState": "a",
+				"shipToZip": 0.1,
+				"shipToCountry": "a"
+			},
+			"shipFrom": {
+			},
+			"soldTo": {
+				"soldToName": "a",
+				"soldToAddress": "a",
+				"soldToCity": "a",
+				"soldToState": "a",
+				"soldToZip": 0.1,
+				"soldToCountry": "a"
+			}
+		},
+		"TotalSummary": {
+			"SummaryTotal": 0.1
+		},
+		"LINE": [
+			{
+				"LineDetail": {
+					"lineNumber": 0.1,
+					"lineQuantity": 0.1,
+					"lineUOM": "a",
+					"linePrice": 0.1,
+					"linePricePerUnit": 0.1,
+					"lineCustMaterial": "a",
+					"lineVendMaterial": "a",
+					"lineMaterialDescription": "a"
+				},
+				"lineDates": {
+					"lineRequestedDeliveryDate": "a",
+					"lineRequestedShipDate": "a"
+				}
+			}
+		]
+	}
+}

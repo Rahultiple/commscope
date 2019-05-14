@@ -1,0 +1,102 @@
+{
+	"Header": {
+		"APartyDetails": {
+			"Sender": "a",
+			"Receiver": "a"
+		},
+		"CType": {
+			"Doctype": "a",
+			"Vertype": 0.1,
+			"SEmail": "a@aa.com"
+		},
+		"DocDates": {
+			"currentDate": "a",
+			"requestedShipDate": "a",
+			"requestedDeliveryDate": "a",
+			"shipDate": "a",
+			"deliveryDate": "a"
+		},
+		"HDetail": {
+			"PONumber": 0.1,
+			"shipmentNumber": 0.1,
+			"deliveryNumber": 0.1,
+			"InvoiceNumber": 0.1,
+			"salesOrderNumber": 0.1,
+			"currency": "a",
+			"emailAddress": "a@aa.com"
+		},
+		"HAddress": {
+			"shipTo": {
+				"shipToName": "a",
+				"shipToName2": "a",
+				"shipToAddress": "a",
+				"shipToAddress2": "a",
+				"shipToCity": "a",
+				"shipToState": "a",
+				"shipToZip": 0.1,
+				"shipToCountry": "a"
+			},
+			"shipFrom": {
+				"shipFromName": "a",
+				"shipFromName2": "a",
+				"shipFromAddress": "a",
+				"shipFromAddress2": "a",
+				"shipFromCity": "a",
+				"shipFromState": "a",
+				"shipFromZip": "a",
+				"shipFromCountry": "a"
+			},
+			"soldTo": {
+				"soldToName": "a",
+				"soldToName2": "a",
+				"soldToAddress": "a",
+				"soldToAddress2": "a",
+				"soldToCity": "a",
+				"soldToState": "a",
+				"soldToZip": 0.1,
+				"soldToCountry": "a"
+			},
+			"billTo": {
+				"billToName": "a",
+				"billToName2": "a",
+				"billToAddress": "a",
+				"billToAddress2": "a",
+				"billToCity": "a",
+				"billToState": "a",
+				"billToZip": 0.1,
+				"billToCountry": "a"
+			},
+			"thirdParty": {
+				"thrdPartyName": "a",
+				"thrdPartyName2": "a",
+				"thrdPartyAddress": "a",
+				"thrdPartyAddress2": "a",
+				"thrdPartyCity": "a",
+				"thrdPartyState": "a",
+				"thrdPartyZip": "a",
+				"thrdPartyCountry": "a"
+			}
+		},
+		"TotalSummary": {
+			"SummaryTotal": 0.1
+		},
+		"LINE": [
+			{
+				"LineDetail": {
+					"lineNumber": 0.1,
+					"lineQuantity": 0.1,
+					"lineUOM": "a",
+					"linePrice": 0.1,
+					"linePricePerUnit": 0.1,
+					"lineCustMaterial": "a",
+					"lineVendMaterial": "a",
+					"lineMaterialDescription": "a"
+				},
+				"lineDates": {
+					"lineRequestedDeliveryDate": "a",
+					"lineRequestedShipDate": "a"
+				}
+			}
+		]
+	}
+}

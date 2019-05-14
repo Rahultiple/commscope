@@ -1,0 +1,502 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/object_04",
+  "definitions": {
+    "object_01": {
+      "title": "HAddress",
+      "type": "object",
+      "required": [
+        "shipTo",
+        "shipFrom",
+        "soldTo"
+      ],
+      "optional": [
+        "billTo",
+        "thirdParty"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "shipTo": {
+          "title": "shipTo",
+          "type": "object",
+          "required": [
+            "shipToName",
+            "shipToAddress",
+            "shipToCity",
+            "shipToState",
+            "shipToZip",
+            "shipToCountry"
+           ],
+           "optional": [
+           	"shipToName2","shipToAddress2"
+           ],
+          "additionalProperties": false,
+          "properties": {
+            "shipToName": {
+              "type": "string"
+            },
+            "shipToName2": {
+              "type": "string"
+            },
+            "shipToAddress": {
+              "type": "string"
+            },
+            "shipToAddress2": {
+              "type": "string"
+            },
+            "shipToCity": {
+              "type": "string"
+            },
+            "shipToState": {
+              "type": "string"
+            },
+            "shipToZip": {
+              "type": "number"
+            },
+            "shipToCountry": {
+              "type": "string"
+            }
+          }
+        },
+        "shipFrom": {
+          "title": "shipFrom",
+          "type": "object",
+          "optional": [
+            "shipFromName",
+            "shipFromName2",
+            "shipFromAddress",
+            "shipFromAddress2",
+            "shipFromCity",
+            "shipFromState",
+            "shipFromZip",
+            "shipFromCountry"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "shipFromName": {
+              "type": "string"
+            },
+            "shipFromName2": {
+              "type": "string"
+            },
+            "shipFromAddress": {
+              "type": "string"
+            },
+            "shipFromAddress2": {
+              "type": "string"
+            },
+            "shipFromCity": {
+              "type": "string"
+            },
+            "shipFromState": {
+              "type": "string"
+            },
+            "shipFromZip": {
+              "type": "string"
+            },
+            "shipFromCountry": {
+              "type": "string"
+            }
+          }
+        },
+        "soldTo": {
+          "title": "soldTo",
+          "type": "object",
+          "required": [
+            "soldToName",
+            "soldToAddress",
+            "soldToCity",
+            "soldToState",
+            "soldToZip",
+            "soldToCountry"
+          ],
+          "optional": [
+           	"soldToName2","soldToAddress2"
+           ],
+          "additionalProperties": false,
+          "properties": {
+            "soldToName": {
+              "type": "string"
+            },
+            "soldToName2": {
+              "type": "string"
+            },
+            "soldToAddress": {
+              "type": "string"
+            },
+            "soldToAddress2": {
+              "type": "string"
+            },
+            "soldToCity": {
+              "type": "string"
+            },
+            "soldToState": {
+              "type": "string"
+            },
+            "soldToZip": {
+              "type": "number"
+            },
+            "soldToCountry": {
+              "type": "string"
+            }
+          }
+        },
+        "billTo": {
+          "title": "billTo",
+          "type": "object",
+          "optional": [
+            "billToName",
+            "billToName2",
+            "billToAddress",
+            "billToAddress2",
+            "billToCity",
+            "billToState",
+            "billToZip",
+            "billToCountry"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "billToName": {
+              "type": "string"
+            },
+            "billToName2": {
+              "type": "string"
+            },
+            "billToAddress": {
+              "type": "string"
+            },
+            "billToAddress2": {
+              "type": "string"
+            },
+            "billToCity": {
+              "type": "string"
+            },
+            "billToState": {
+              "type": "string"
+            },
+            "billToZip": {
+              "type": "number"
+            },
+            "billToCountry": {
+              "type": "string"
+            }
+          }
+        },
+        "thirdParty": {
+          "title": "thirdParty",
+          "type": "object",
+          "optional": [
+            "thrdPartyName",
+            "thrdPartyName2",
+            "thrdPartyAddress",
+            "thrdPartyAddress2",
+            "thrdPartyCity",
+            "thrdPartyState",
+            "thrdPartyZip",
+            "thrdPartyCountry"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "thrdPartyName": {
+              "type": "string"
+            },
+            "thrdPartyName2": {
+              "type": "string"
+            },
+            "thrdPartyAddress": {
+              "type": "string"
+            },
+            "thrdPartyAddress2": {
+              "type": "string"
+            },
+            "thrdPartyCity": {
+              "type": "string"
+            },
+            "thrdPartyState": {
+              "type": "string"
+            },
+            "thrdPartyZip": {
+              "type": "string"
+            },
+            "thrdPartyCountry": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "object_02": {
+      "type": "object",
+      "required": [
+        "LineDetail",
+        "lineDates"
+      ],
+      "optional": [
+        "packaging"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "LineDetail": {
+          "title": "LineDetail",
+          "type": "object",
+          "required": [
+            "lineNumber",
+            "lineQuantity",
+            "lineUOM",
+            "linePrice",
+            "linePricePerUnit",
+            "lineCustMaterial",
+            "lineVendMaterial",
+            "lineMaterialDescription"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "lineNumber": {
+              "type": "number"
+            },
+            "lineQuantity": {
+              "type": "number"
+            },
+            "lineUOM": {
+              "type": "string"
+            },
+            "linePrice": {
+              "type": "number"
+            },
+            "linePricePerUnit": {
+              "type": "number"
+            },
+            "lineCustMaterial": {
+              "type": "string"
+            },
+            "lineVendMaterial": {
+              "type": "string"
+            },
+            "lineMaterialDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "lineDates": {
+          "title": "lineDates",
+          "type": "object",
+          "required": [
+            "lineRequestedDeliveryDate",
+            "lineRequestedShipDate"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "lineRequestedDeliveryDate": {
+              "type": "string"
+            },
+            "lineRequestedShipDate": {
+              "type": "string"
+            }
+          }
+        },
+        "packaging": {
+          "title": "packaging",
+          "type": "object",
+          "optional": [
+            "quantity",
+            "packageType",
+            "weightMeasureType",
+            "weight",
+            "lengthMeasureType",
+            "length",
+            "heightMeasureType",
+            "height",
+            "width"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "quantity": {
+              "type": "string"
+            },
+            "packageType": {
+              "type": "string"
+            },
+            "weightMeasureType": {
+              "type": "string"
+            },
+            "weight": {
+              "type": "string"
+            },
+            "lengthMeasureType": {
+              "type": "string"
+            },
+            "length": {
+              "type": "string"
+            },
+            "heightMeasureType": {
+              "type": "string"
+            },
+            "height": {
+              "type": "string"
+            },
+            "width": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "object_03": {
+      "title": "Header",
+      "type": "object",
+      "required": [
+        "APartyDetails",
+        "CType",
+        "DocDates",
+        "HDetail",
+        "HAddress",
+        "TotalSummary",
+        "LINE"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "APartyDetails": {
+          "title": "APartyDetails",
+          "type": "object",
+          "required": [
+            "Sender",
+            "Receiver"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "Sender": {
+              "type": "string"
+            },
+            "Receiver": {
+              "type": "string"
+            }
+          }
+        },
+        "CType": {
+          "title": "CType",
+          "type": "object",
+          "required": [
+            "Doctype",
+            "Vertype",
+            "SEmail"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "Doctype": {
+              "type": "string"
+            },
+            "Vertype": {
+              "type": "number"
+            },
+            "SEmail": {
+              "type": "string"
+            }
+          }
+        },
+        "DocDates": {
+          "title": "DocDates",
+          "type": "object",
+          "required": [
+            "currentDate",
+            "requestedShipDate",
+            "requestedDeliveryDate",
+            "shipDate",
+            "deliveryDate"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "currentDate": {
+              "type": "string"
+            },
+            "requestedShipDate": {
+              "type": "string"
+            },
+            "requestedDeliveryDate": {
+              "type": "string"
+            },
+            "shipDate": {
+              "type": "string"
+            },
+            "deliveryDate": {
+              "type": "string"
+            }
+          }
+        },
+        "HDetail": {
+          "title": "HDetail",
+          "type": "object",
+          "required": [
+            "PONumber",
+            "shipmentNumber",
+            "deliveryNumber",
+            "InvoiceNumber",
+            "salesOrderNumber",
+            "currency",
+            "emailAddress"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "PONumber": {
+              "type": "number"
+            },
+            "shipmentNumber": {
+              "type": "number"
+            },
+            "deliveryNumber": {
+              "type": "number"
+            },
+            "InvoiceNumber": {
+              "type": "number"
+            },
+            "salesOrderNumber": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "emailAddress": {
+              "type": "string",
+              "format": "email"
+            }
+          }
+        },
+        "HAddress": {
+          "$ref": "#/definitions/object_01"
+        },
+        "TotalSummary": {
+          "title": "TotalSummary",
+          "type": "object",
+          "required": [
+            "SummaryTotal"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "SummaryTotal": {
+              "type": "number"
+            }
+          }
+        },
+        "LINE": {
+          "type": "array",
+          "title": "LINE",
+          "items": {
+            "$ref": "#/definitions/object_02"
+          }
+        }
+      }
+    },
+    "object_04": {
+      "description": "JSON Schema generated by XMLSpy v2019 rel. 3 (x64) (http://www.altova.com)",
+      "type": "object",
+      "required": [
+        "Header"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Header": {
+          "$ref": "#/definitions/object_03"
+        }
+      }
+    }
+  }
+}

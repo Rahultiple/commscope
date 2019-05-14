@@ -1,0 +1,45 @@
+{
+	"Header": {
+		"APartyDetails": {
+			"Sender": "a",
+			"Receiver": "a"
+		},
+		"CType": {
+			"Doctype": "a",
+			"Vertype": 0.1,
+			"SEmail": "a@aa.com"
+		},
+		"DocDates": {
+			"currentDate": "a",
+			"requestedDeliveryDate": "a",
+			"deliveryDate": "a"
+		},
+		"HDetail": {
+			"PONumber": 0.1,
+			"deliveryNumber": 0.1,
+			"currency": "a",
+			"emailAddress": "a@aa.com"
+		},
+		"TotalSummary": {
+			"SummaryTotal": 0.1
+		},
+		"LINE": [
+			{
+				"LineDetail": {
+					"lineNumber": 0.1,
+					"lineQuantity": 0.1,
+					"lineUOM": "a",
+					"linePrice": 0.1,
+					"linePricePerUnit": 0.1,
+					"lineCustMaterial": "a",
+					"lineVendMaterial": "a",
+					"lineMaterialDescription": "a"
+				},
+				"lineDates": {
+					"lineRequestedDeliveryDate": "a",
+					"lineRequestedShipDate": "a"
+				}
+			}
+		]
+	}
+}

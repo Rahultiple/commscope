@@ -1,0 +1,24 @@
+<publishData>
+	<publishProfile
+		profileName="commscopedevapi - Web Deploy" publishMethod="MSDeploy"
+		publishUrl="commscopedevapi.scm.azurewebsites.net:443"
+		msdeploySite="commscopedevapi" userName="$commscopedevapi"
+		userPWD="M7jPTwTmgGGKkB9CjkeBtf0R3R9tjNuPjmDEDxcjnrYmEiDSwt980awMDjdp"
+		destinationAppUrl="http://commscopedevapi.azurewebsites.net"
+		SQLServerDBConnectionString="" mySQLDBConnectionString=""
+		hostingProviderForumLink=""
+		controlPanelLink="http://windows.azure.com" webSystem="WebSites">
+		<databases />
+	</publishProfile>
+	<publishProfile profileName="commscopedevapi - FTP"
+		publishMethod="FTP"
+		publishUrl="ftp://waws-prod-dm1-123.ftp.azurewebsites.windows.net/site/wwwroot"
+		ftpPassiveMode="True" userName="commscopedevapi\$commscopedevapi"
+		userPWD="M7jPTwTmgGGKkB9CjkeBtf0R3R9tjNuPjmDEDxcjnrYmEiDSwt980awMDjdp"
+		destinationAppUrl="http://commscopedevapi.azurewebsites.net"
+		SQLServerDBConnectionString="" mySQLDBConnectionString=""
+		hostingProviderForumLink=""
+		controlPanelLink="http://windows.azure.com" webSystem="WebSites">
+		<databases />
+	</publishProfile>
+</publishData>
