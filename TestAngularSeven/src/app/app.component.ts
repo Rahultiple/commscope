@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Audit-UI';
-
+  myParentData:string;
   parentString:String="heloFromParent";
+  showData(){
+    alert("value =>"+this.myParentData);
+  }
 }

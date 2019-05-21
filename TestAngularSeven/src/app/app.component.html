@@ -3,7 +3,7 @@
   <h1>
     Welcome to {{ title }}! this is APPComponnnt Page and parent String {{parentString}}
   </h1>
-<h2>Here are some links to help you start: </h2> 
+<h2>Here are some links to help you start: </h2>
 </div>
 
 
@@ -19,3 +19,10 @@
 <div style="border: blue;display:block;background-color: green">
     <app-product-detail [toChildString]="parentString"></app-product-detail>
 </div>
+<hr/>
+<h3>Child To Parent</h3>
+ <p>
+   Passing value From Footer(Child component ) to App component (parent Component)
+ </p>
+ <app-footer (sendData)="myParentData=$event"></app-footer>
+ <input type="button" (click)="showData()" value="showData"/>
