@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import {  HttpClient, HttpHeaders} from '@angular/common/http';
-import { SearchForm ,SearchFormOutput} from '../dashboard/interface';
+import { SearchForm ,SearchFormOutput} from '../util/interface';
 import {Http, Headers} from '@angular/http';
 
 @Injectable({

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule,FormGroup,FormControl } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './util/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductlistComponent } from './productlist/productlist.component';
@@ -18,7 +18,8 @@ import { BiddingComponent } from './bidding/bidding.component';
 import { SearchAuditComponent } from './searchAudit/searchAudit.component';
 import { AuditSearchService } from './auditSearchService/audit-search.service';
 import { AgGridModule } from 'ag-grid-angular';
-import {BsDatepickerModule} from 'ngx-bootstrap/datepicker'
+import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
+import { DashboardSiteComponent } from './dashboard-site/dashboard-site.component'
 @NgModule({
    declarations: [
       AppComponent,
@@ -31,7 +32,8 @@ import {BsDatepickerModule} from 'ngx-bootstrap/datepicker'
       FooterComponent,
       DetailInputComponent,
       BiddingComponent,
-      SearchAuditComponent
+      SearchAuditComponent,
+      DashboardSiteComponent
      ],
    imports: [
       AgGridModule.withComponents(null),

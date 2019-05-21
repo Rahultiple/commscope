@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {  HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Inteface1 } from '../dashboard/interface';
+import { Inteface1 } from '../util/interface';
 // tslint:disable-next-line:comment-format
 //import 'rxjs/add/operator/toPromise';
 

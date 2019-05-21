@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   // this.id=  data.id; */
    //this.userId= data.userId;
 
-   location.href="dashboard";
+   location.href="dashboard-site";
 
   }
 

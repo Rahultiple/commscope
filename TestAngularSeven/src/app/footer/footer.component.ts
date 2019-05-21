@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'selenium-webdriver';
+import { EventEmitter }  from '@angular/core';;
 
 @Component({
   selector: 'app-footer',
@@ -14,6 +14,7 @@ export class FooterComponent implements OnInit {
   }
   @Output() sendData=new EventEmitter();
   sendToParent(textValue:string){
+    alert("value -> "+textValue)
     this.sendData.emit(textValue);
   }
 

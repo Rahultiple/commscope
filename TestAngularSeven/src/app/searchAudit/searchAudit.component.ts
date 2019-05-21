@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {  FormGroup,FormControl } from '@angular/forms';
 import { AuditSearchService } from '../auditSearchService/audit-search.service';
-import { SearchForm,Params,SearchFormOutput } from '../dashboard/interface';
+import { SearchForm,Params,SearchFormOutput } from '../util/interface';
 import {BsDatepickerConfig} from 'ngx-bootstrap/datepicker';
 import { formatDate, DatePipe } from "@angular/common";
 

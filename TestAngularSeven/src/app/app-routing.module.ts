@@ -2,13 +2,14 @@ import { SearchAuditComponent } from './searchAudit/searchAudit.component';
 import { BiddingComponent } from './bidding/bidding.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './util/dashboard.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductlistSidebarComponent } from './productlist-sidebar/productlist-sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailInputComponent } from './detail-input/detail-input.component';
+import { DashboardSiteComponent } from './dashboard-site/dashboard-site.component';
 const routes: Routes = [
   { path: "products", component: DashboardComponent },
   { path: "product/:id", component: ProductDetailComponent },
@@ -29,6 +30,11 @@ const routes: Routes = [
     path: "products",
     component: ProductlistSidebarComponent,
     outlet: "sidebar"
+  },
+  {
+    path: "dashboard-site",
+    component: DashboardSiteComponent
+
   },
   {
     path: "dashboard",
